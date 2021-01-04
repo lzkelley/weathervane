@@ -265,7 +265,15 @@ class Stations:
         if (warn_above is not None) and (min_dist > warn_above):
             logging.warning(f"WARNING: nearest distance {min_dist:.1f} km is large!")
 
-        return self.iloc[idx], idx, min_dist
+        stat = self.iloc[idx]
+        stat._nearest_name = self.cities.city_state(name)
+
+        return stat, idx, min_dist
+
+
+def station_id(stat):
+    stid = str(stat.USAF.item()) + str(stat.WBAN.item())
+    return stid
 
 
 def load_stations_list():
@@ -327,8 +335,13 @@ def _merge_station_years(name, files, fname, allow_num_bad=3):
     return
 
 
+def smooth(data, *args, **kwargs):
+    smoothed = sp.ndimage.filters.gaussian_filter(data, *args, **kwargs)
+    return smoothed
+
+
 def download_station(stat, **kwargs):
-    name = str(stat.USAF.item()) + str(stat.WBAN.item())
+    name = station_id(stat)
     beg = int(str(stat.BEGIN.item())[:4])
     end = int(str(stat.END.item())[:4])
 
