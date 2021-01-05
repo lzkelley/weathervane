@@ -1,0 +1,79 @@
+
+svg text {
+    font-size:16px;
+}
+
+svg text.counters {
+    /*padding: 10px;
+    position: relative;
+    height: 20px;*/
+}
+
+svg rect.counters {
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+svg text .button {
+}
+
+svg rect.button {
+    fill: rgba(255, 255, 255, 0.6);
+    rx: 10;
+    ry: 10;
+    stroke: rgba(0, 0, 0, 0.6);
+    stroke-width: 1px;
+}
+
+svg path.axis {
+    stroke: rgba(0, 0, 0, 1.0);
+    stroke-width: 1px;
+    fill: none;
+}
+
+svg path.line {
+    stroke-width: 2px;
+    fill: none;
+}
+
+svg path.line#m1 {
+    stroke: rgba(170, 0, 0, 0.7);
+}
+
+svg path.line#m2 {
+    stroke: rgba(0, 0, 170, 0.7);
+}
+
+/* == Option Sliders == */
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 6px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 4px;
+  stroke-opacity: 0.3;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 20px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  fill-opacity: 0.5;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
