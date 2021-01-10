@@ -3,13 +3,88 @@ svg text {
     font-size:16px;
 }
 
-svg text.counters {
+/* background rectangle for detecting actions (e.g. mouse movement) */
+svg rect.action {
+  fill: none;
+  cursor: crosshair;
+  pointer-events: all;
+}
+
+/* rectangle behind text elements to make them more visible */
+svg rect.textbg {
+  fill: white;
+  opacity: 0.5;
+  stroke: none;
+  /* stroke: OrangeRed;
+  stroke-width: 1px;
+  stroke-opacity: 0.25; */
+}
+
+svg line, path {
+    /* stroke: blue; */
+    /* opacity: 1; */
+    stroke: grey;
+    stroke-width: 1px;
+}
+
+/* These are specifically the ticks used for making grid lines */
+svg .grid .tick {
+    stroke: grey;
+    opacity: 0.15;
+}
+
+/* Used for targets at mouse pointers, etc */
+svg line.target {
+  stroke: OrangeRed;
+  opacity: 0.5;
+  stroke-dasharray: 5px;
+}
+
+/* Confidence intervals, etc */
+svg path.fill {
+  opacity: 0.25;
+  fill: steelblue;
+  /* stroke: none; */
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+/* Ave lines and relations, etc */
+svg path.curve {
+  opacity: 0.8;
+  stroke: steelblue;
+  stroke-width: 2.0px;
+  fill: none;
+}
+
+
+svg text.target {
+  opacity: 0.85;
+  fill: OrangeRed;
+  margin: 2em;
+  font-weight: 300;
+
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-opacity: 0.5;
+
+}
+
+/* svg line {
+    stroke: blue;
+    opacity: 50;
+} */
+
+
+/* svg text.counters { */
     /*padding: 10px;
     position: relative;
     height: 20px;*/
-}
+/* } */
 
-svg rect.counters {
+/* svg rect.counters {
     fill: rgba(255, 255, 255, 0.6);
 }
 
@@ -28,9 +103,9 @@ svg path.axis {
     stroke: rgba(0, 0, 0, 1.0);
     stroke-width: 1px;
     fill: none;
-}
+} */
 
-svg path.line {
+/* svg path.line {
     stroke-width: 2px;
     fill: none;
 }
@@ -41,11 +116,11 @@ svg path.line#m1 {
 
 svg path.line#m2 {
     stroke: rgba(0, 0, 170, 0.7);
-}
+} */
 
 /* == Option Sliders == */
 
-.track,
+/* .track,
 .track-inset,
 .track-overlay {
   stroke-linecap: round;
@@ -76,4 +151,4 @@ svg path.line#m2 {
   stroke: #000;
   stroke-opacity: 0.5;
   stroke-width: 1.25px;
-}
+} */

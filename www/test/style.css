@@ -23,8 +23,26 @@ h2 {
 	letter-spacing: -1px;
 }
 
+div.plot-area {
+	display:flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.plot-left {
+	/* float: left; */
+	display: inline-block;
+}
+
+.plot-right {
+	/* float: right; */
+	display: inline-block;
+}
+
 svg {
-	border: solid 1px red;
+	/* border: solid 1px red; */
+	/* display: block;
+    margin: auto; */
 }
 
 .header {
@@ -57,7 +75,7 @@ a {
 } */
 
 
-.grid .tick {
+/* .grid .tick {
     stroke: lightgrey;
     opacity: 0.2;
 }
@@ -65,7 +83,7 @@ a {
 .grid .tick:hover {
     stroke: lightgrey;
     opacity: 0.8;
-}
+} */
 
 
 /* .grid path {
